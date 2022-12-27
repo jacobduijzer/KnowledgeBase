@@ -1,6 +1,6 @@
 name: Build and deploy (Core)
 env:
-  OUTPUT_FOLDER: .output\
+  OUTPUT_FOLDER: .output
   
 on:
   push:
