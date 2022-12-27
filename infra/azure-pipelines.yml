@@ -43,7 +43,7 @@ steps:
       azureSubscription: $(azureServiceConnection)
       scriptType: bash
       scriptLocation: inlineScript
-      inlineScript: az deployment group create --resource-group rg-knowledgebase --template-file staticwebapp.bicep
+      inlineScript: az deployment group create --resource-group rg-knowledgebase --template-file staticwebapp.json
       workingDirectory: 'infra'
   - task: AzureStaticWebApp@0
     inputs:
