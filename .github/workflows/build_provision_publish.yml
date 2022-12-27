@@ -26,7 +26,7 @@ jobs:
 
       - name: Build
         if: ${{ inputs.preview == false }}
-        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml
+        run: "hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml"
 
       - name: Build (preview)
         if: ${{ inputs.preview == true }}
