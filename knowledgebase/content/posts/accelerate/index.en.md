@@ -64,3 +64,5 @@ The research (2019) has uncovered 24 key capabilities that drive improvements in
 > * Does software delivery impact organizations?
 > * Does culture matter, and how do we measure it?
 > * What technical practices appear to be important?
+
+
