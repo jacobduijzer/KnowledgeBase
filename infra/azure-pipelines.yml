@@ -8,66 +8,20 @@ variables:
   azureServiceConnection: 'AllSystemsGoneAzureSP'
   location: 'westeurope'
 
-parameters:
-  - name: environments
-    type: object
-    default:
-    - name: test
-    - name: accept
-    - name: prod
-
-stages:
-- ${{ each environment in parameters.environments }}:
-  - stage: 'CREATE_ENVIRONMENT_${{ environment.name }}'
-    jobs:
-    - job: CREATE_RESOURCE_GROUP
-      steps:
-      - task: AzureCLI@2
-        displayName: '(1) Generate Bicep file (workaround)'
-        inputs:
-          azureSubscription: '$(azureServiceConnection)'
-          scriptType: 'bash'
-          scriptLocation: 'inlineScript'
-          inlineScript: 'bicep build resourcegroup.bicep'
-          workingDirectory: 'infra'
-      - task: AzureCLI@2
-        displayName: '(2) Test deploying resource group'
-        inputs: 
-          azureSubscription: $(azureServiceConnection)
-          scriptType: bash
-          scriptLocation: inlineScript
-          inlineScript: az deployment sub create --what-if --template-file resourcegroup.json --location $(location)
-          workingDirectory: 'infra'
-      - task: AzureCLI@2
-        displayName: '(3) Deploy resource group'
-        inputs: 
-          azureSubscription: $(azureServiceConnection)
-          scriptType: bash
-          scriptLocation: inlineScript
-          inlineScript: az deployment sub create --template-file resourcegroup.json --location $(location) --parameters environmentName=${{ environment.name }}
-          workingDirectory: 'infra'
-      - task: AzureCLI@2
-        displayName: '(4) Generate Bicep file (workaround)'
-        inputs:
-          azureSubscription: '$(azureServiceConnection)'
-          scriptType: 'bash'
-          scriptLocation: 'inlineScript'
-          inlineScript: 'bicep build main.bicep'
-          workingDirectory: 'infra'
-      - task: AzureCLI@2
-        displayName: '(5) Test deploying resource group'
-        inputs: 
-          azureSubscription: $(azureServiceConnection)
-          scriptType: bash
-          scriptLocation: inlineScript
-          inlineScript: az deployment group create --what-if --resource-group rg-${{ environment.name }}-dataprocessor --template-file main.bicep
-          workingDirectory: 'infra'
-      - task: AzureCLI@2
-        displayName: '(6) Deploy resource group'
-        inputs: 
-          azureSubscription: $(azureServiceConnection)
-          scriptType: bash
-          scriptLocation: inlineScript
-          inlineScript: az deployment group create --resource-group rg-${{ environment.name }}-dataprocessor --template-file main.bicep
-          workingDirectory: 'infra'
-          
+steps:
+  - task: AzureCLI@2
+    displayName: '(1) Generate Bicep file (workaround)'
+    inputs:
+      azureSubscription: '$(azureServiceConnection)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'bicep build resourcegroup.bicep'
+      workingDirectory: 'infra'
+  - task: AzureCLI@2
+    displayName: '(3) Deploy Resource Group'
+    inputs: 
+      azureSubscription: $(azureServiceConnection)
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: az deployment sub create --template-file resourcegroup.json --location $(location)
+      workingDirectory: 'infra'
