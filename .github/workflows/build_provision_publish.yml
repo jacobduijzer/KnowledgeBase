@@ -37,9 +37,3 @@ jobs:
         with:
           name: website
           path: ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }}
-
-      - name: Publish blog json
-        uses: actions/upload-artifact@v3
-        with:
-          name: json
-          path: ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }}/index.json
