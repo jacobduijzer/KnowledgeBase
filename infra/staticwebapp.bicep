@@ -8,7 +8,7 @@ resource swa_resource 'Microsoft.Web/staticSites@2021-01-15' = {
   tags: null
   properties: {}
   sku: {
-      name: 'Free' 
-      size: 'Free'
+      name: 'Standard' 
+      size: 'Standard'
   }
 }
