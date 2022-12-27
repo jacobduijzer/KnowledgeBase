@@ -26,11 +26,11 @@ jobs:
 
       - name: Build
         if: ${{ inputs.preview == false }}
-        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml,config.speaking.toml
+        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml
 
       - name: Build (preview)
         if: ${{ inputs.preview == true }}
-        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml,config.speaking.toml --buildDrafts --buildFuture --baseURL '/'
+        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml --buildDrafts --buildFuture --baseURL '/'
 
       - name: Publish website output
         uses: actions/upload-artifact@v3
