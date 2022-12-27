@@ -1,6 +1,14 @@
 name: Build and deploy (Core)
 env:
-  OUTPUT_FOLDER: .output
+  OUTPUT_FOLDER: .output\
+  
+on:
+  workflow_call:
+    inputs:
+      preview:
+        required: false
+        type: boolean
+        default: false
   
 jobs:
   build_hugo:
@@ -22,11 +30,11 @@ jobs:
 
       - name: Build
         if: ${{ inputs.preview == false }}
-        run: hugo --minify --source ./src --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml,config.speaking.toml
+        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml,config.speaking.toml
 
       - name: Build (preview)
         if: ${{ inputs.preview == true }}
-        run: hugo --minify --source ./src --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml,config.speaking.toml --buildDrafts --buildFuture --baseURL '/'
+        run: hugo --minify --source ./knowledgebase --destination ${{ github.workspace }}/${{ env.OUTPUT_FOLDER }} --config config.toml,config.speaking.toml --buildDrafts --buildFuture --baseURL '/'
 
       - name: Publish website output
         uses: actions/upload-artifact@v3
