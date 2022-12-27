@@ -1,24 +1,14 @@
 //
-// Creates a resource group with the name 'rg-<environment>-solutionname'
+// Creates a resource group with the name 'rg-solutionname'
 //
 
-var solutionName = 'dataprocessor'
+var solutionName = 'knowledgebase'
 targetScope = 'subscription'
-
-@description('The name of the environment. This must be test, accept or prod.')
-@allowed([
-  'test'
-  'accept'
-  'prod'
-])
-param environmentName string = 'test'
 
 @description('The location.')
 param location string = 'westeurope'
 
-var baseName = '${environmentName}-${solutionName}'
-
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
-  name: 'rg-${environmentName}-${solutionName}'
+  name: 'rg--${solutionName}'
   location: location
 }
