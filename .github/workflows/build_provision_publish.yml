@@ -3,12 +3,8 @@ env:
   OUTPUT_FOLDER: .output\
   
 on:
-  workflow_call:
-    inputs:
-      preview:
-        required: false
-        type: boolean
-        default: false
+  push:
+  workflow_dispatch:
   
 jobs:
   build_hugo:
