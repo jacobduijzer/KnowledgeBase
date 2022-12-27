@@ -10,7 +10,7 @@ variables:
 
 steps:
   - task: AzureCLI@2
-    displayName: '(1) Generate Bicep file (workaround)'
+    displayName: '(1) Generate Bicep file for Resource Group (workaround)'
     inputs:
       azureSubscription: '$(azureServiceConnection)'
       scriptType: 'bash'
@@ -18,10 +18,26 @@ steps:
       inlineScript: 'bicep build resourcegroup.bicep'
       workingDirectory: 'infra'
   - task: AzureCLI@2
-    displayName: '(3) Deploy Resource Group'
+    displayName: '(2) Deploy Resource Group'
     inputs: 
       azureSubscription: $(azureServiceConnection)
       scriptType: bash
       scriptLocation: inlineScript
       inlineScript: az deployment sub create --template-file resourcegroup.json --location $(location)
+      workingDirectory: 'infra'
+  - task: AzureCLI@2
+    displayName: '(3) Generate Bicep file for Static Web App (workaround)'
+    inputs:
+      azureSubscription: '$(azureServiceConnection)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'bicep build staticwebapp.bicep'
+      workingDirectory: 'infra'
+  - task: AzureCLI@2
+    displayName: '(4) Deploy Static Web App'
+    inputs:
+      azureSubscription: $(azureServiceConnection)
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: az deployment group create --resource-group rg-knowledgebase --template-file staticwebapp.bicep
       workingDirectory: 'infra'
