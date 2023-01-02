@@ -33,10 +33,9 @@ jobs:
             az group create -g ${{ secrets.RESOURCE_GROUP }} -l ${{ secrets.RESOURCE_GROUP_LOCATION }}
             
       - name: Create json from bicep
-        uses: azure/arm-deploy@v1
+        uses: aliencube/bicep-build-actions@v0.3
         with:
-          inlineScript: |
-            bicep build ./infra/staticwebapp.bicep
+          files: ./infra/staticwebapp.bicep
             
       - name: Deploy Bicep
         uses: azure/arm-deploy@v1
