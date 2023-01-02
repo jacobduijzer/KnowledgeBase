@@ -12,6 +12,3 @@ resource swa_resource 'Microsoft.Web/staticSites@2021-01-15' = {
       size: 'Free'
   }
 }
-
-output deployment_token string = listSecrets(swa_resource.id, swa_resource.apiVersion).properties.apiKey
-
