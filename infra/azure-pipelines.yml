@@ -13,41 +13,50 @@ steps:
     displayName: Download Hugo v0. Linux x64
   - script: sudo dpkg -i $(Pipeline.Workspace)/hugo*.deb
     displayName: Install Hugo
-  - task: AzureCLI@2
-    displayName: '(1) Generate Bicep file for Resource Group (workaround)'
-    inputs:
-      azureSubscription: '$(azureServiceConnection)'
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: 'bicep build resourcegroup.bicep'
-      workingDirectory: 'infra'
-  - task: AzureCLI@2
-    displayName: '(2) Deploy Resource Group'
-    inputs: 
-      azureSubscription: $(azureServiceConnection)
-      scriptType: bash
-      scriptLocation: inlineScript
-      inlineScript: az deployment sub create --template-file resourcegroup.json --location $(location)
-      workingDirectory: 'infra'
-  - task: AzureCLI@2
-    displayName: '(3) Generate Bicep file for Static Web App (workaround)'
-    inputs:
-      azureSubscription: '$(azureServiceConnection)'
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: 'bicep build staticwebapp.bicep'
-      workingDirectory: 'infra'
-  - task: AzureCLI@2
-    displayName: '(4) Deploy Static Web App'
-    inputs:
-      azureSubscription: $(azureServiceConnection)
-      scriptType: bash
-      scriptLocation: inlineScript
-      inlineScript: az deployment group create --resource-group rg-knowledgebase --template-file staticwebapp.json
-      workingDirectory: 'infra'
+  # - task: AzureCLI@2
+  #   displayName: '(1) Generate Bicep file for Resource Group (workaround)'
+  #   inputs:
+  #     azureSubscription: '$(azureServiceConnection)'
+  #     scriptType: 'bash'
+  #     scriptLocation: 'inlineScript'
+  #     inlineScript: 'bicep build resourcegroup.bicep'
+  #     workingDirectory: 'infra'
+  # - task: AzureCLI@2
+  #   displayName: '(2) Deploy Resource Group'
+  #   inputs: 
+  #     azureSubscription: $(azureServiceConnection)
+  #     scriptType: bash
+  #     scriptLocation: inlineScript
+  #     inlineScript: az deployment sub create --template-file resourcegroup.json --location $(location)
+  #     workingDirectory: 'infra'
+  # - task: AzureCLI@2
+  #   displayName: '(3) Generate Bicep file for Static Web App (workaround)'
+  #   inputs:
+  #     azureSubscription: '$(azureServiceConnection)'
+  #     scriptType: 'bash'
+  #     scriptLocation: 'inlineScript'
+  #     inlineScript: 'bicep build staticwebapp.bicep'
+  #     workingDirectory: 'infra'
+  # - task: AzureCLI@2
+  #   displayName: '(4) Deploy Static Web App'
+  #   inputs:
+  #     azureSubscription: $(azureServiceConnection)
+  #     scriptType: bash
+  #     scriptLocation: inlineScript
+  #     inlineScript: az deployment group create --resource-group rg-knowledgebase --template-file staticwebapp.json
+  #     workingDirectory: 'infra'
+  # - task: Bash@3
+  #   inputs:
+  #     targetType: 'inline'
+  #     script: 'hugo -s knowledgebase -d public'
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: './'
-      app_build_command: 'hugo -D'
-      output_location: 'public'
+      app_location: '/'
+      app_build_command: 'hugo -s knowledgebase -D'
+      output_location: 'knowledgebase/public'
+      api_location: 'api'
+      skip_app_build: false
+      skip_api_build: true
+      is_static_export: false
+      verbose: true
       azure_static_web_apps_api_token: '5e7bf57cf9e9f9692941912f119ce7e2513e4ec9bb80f6fb45c6d17f0ed4d73c2-24542874-a48d-4fb9-be59-6c592b142eae003168667'
