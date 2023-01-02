@@ -1,7 +1,8 @@
 var settings = loadJsonContent('settings.json')
 
 var solutionName = toLower(settings.solutionName)
-var customDomain = settings.customDomain
+var customDomain1 = settings.customDomain1
+var customDomain2 = settings.customDomain2
 
 resource swa_resource 'Microsoft.Web/staticSites@2021-01-15' = {
   name: 'swa-${solutionName}'
@@ -14,7 +15,12 @@ resource swa_resource 'Microsoft.Web/staticSites@2021-01-15' = {
   }
 }
 
-resource staticwebApplicationDomain 'Microsoft.Web/staticSites/customDomains@2022-03-01' = {
-  name: '${customDomain}'
+resource staticwebApplicationDomain1 'Microsoft.Web/staticSites/customDomains@2022-03-01' = {
+  name: '${customDomain1}'
+  parent: swa_resource
+}
+
+resource staticwebApplicationDomain2 'Microsoft.Web/staticSites/customDomains@2022-03-01' = {
+  name: '${customDomain2}'
   parent: swa_resource
 }
