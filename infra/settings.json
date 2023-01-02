@@ -1,4 +1,5 @@
 {
     "solutionName": "KnowledgeBase",
-    "location": "westeurope"
+    "location": "westeurope",
+    "customDomain": "knowledge.duijzer.com"
 }
