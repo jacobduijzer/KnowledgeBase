@@ -48,7 +48,7 @@ steps:
   - task: Bash@3
     inputs:
       targetType: 'inline'
-      script: 'hugo -s ./src -d ../public'
+      script: 'hugo -d public'
   - task: AzureStaticWebApp@0
     inputs:
       app_location: './'
