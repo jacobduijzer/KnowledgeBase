@@ -45,6 +45,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Get SWA deployment token
+        uses: azure/CLI@v1
+        id: swa-token
+        with:
+          inlineScript: |
+            SWA_DEPLOYMENT_TOKEN=$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} -o tsv --query properties.apiKey)
+            echo "::add-mask::$SWA_DEPLOYMENT_TOKEN"
+            echo SWA_DEPLOYMENT_TOKEN=$SWA_DEPLOYMENT_TOKEN >> $GITHUB_ENV
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
         with:
