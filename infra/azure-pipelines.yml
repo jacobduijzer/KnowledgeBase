@@ -48,12 +48,12 @@ steps:
   - task: Bash@3
     inputs:
       targetType: 'inline'
-      script: 'hugo -d public'
+      script: 'hugo -s knowledgebase -d public'
   - task: AzureStaticWebApp@0
     inputs:
       app_location: './'
       app_build_command: 'hugo -D'
-      output_location: 'public'
+      output_location: 'knowledgebase/public'
       api_location: 'api'
       skip_api_build: true
       is_static_export: true
