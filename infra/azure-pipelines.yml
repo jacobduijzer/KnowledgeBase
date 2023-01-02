@@ -47,7 +47,7 @@ steps:
       workingDirectory: 'infra'
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '/'
+      app_location: './'
       app_build_command: 'hugo -D'
-      output_location: '/public'
+      output_location: 'public'
       azure_static_web_apps_api_token: '5e7bf57cf9e9f9692941912f119ce7e2513e4ec9bb80f6fb45c6d17f0ed4d73c2-24542874-a48d-4fb9-be59-6c592b142eae003168667'
