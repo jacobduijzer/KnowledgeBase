@@ -32,12 +32,17 @@ jobs:
           inlineScript: |
             az group create -g ${{ secrets.RESOURCE_GROUP }} -l ${{ secrets.RESOURCE_GROUP_LOCATION }}
             
+      - name: Create json from bicep
+        uses: aliencube/bicep-build-actions@v0.3
+        with:
+          files: ./infra/staticwebapp.bicep
+            
       - name: Deploy Bicep
         uses: azure/arm-deploy@v1
         with:
           resourceGroupName: ${{ secrets.RESOURCE_GROUP }}
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          template: ./infra/staticwebapp.bicep
+          template: ./infra/staticwebapp.json
           failOnStdErr: false
       
               
