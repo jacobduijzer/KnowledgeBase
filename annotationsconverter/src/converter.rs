@@ -1,40 +1,42 @@
 pub mod converter {
+    use std::arch::x86_64::__cpuid;
+    use std::borrow::{Borrow, BorrowMut};
     use std::fs;
+    use std::thread::current;
 
-    #[derive(Debug)]
-    pub struct Chapter {
-        pub title: String,
-        pub quotes: Vec<String>
+    #[derive(Debug, Default)]
+    pub struct Quote {
+        pub chapter: String,
+        pub quote: Vec<String>,
+        pub notes: Vec<String>
     }
 
-    impl Chapter {
-        pub fn new() -> Chapter {
-            Chapter {
-                title: "".to_string(),
-                quotes: Vec::new()
-            }
+    impl Quote {
+        pub fn add_quote(&mut self, line: &str) {
+            self.quote.push(line.to_string());
         }
 
-        pub fn from(title: &str) -> Chapter {
-            Chapter {
-                title: title.to_string(),
-                quotes: Vec::new()
-            }
-        }
-
-        pub fn add_quote(&mut self, quote: &str) {
-            self.quotes.push(quote.to_string());
+        pub fn add_note(&mut self, line: &str) {
+            self.notes.push(line.to_string());
         }
     }
 
-    #[derive(Debug)]
+    #[derive(Debug, Default)]
     pub struct Book {
         pub title: String,
         pub author: String,
-        pub chapters: Vec<Chapter>
+        pub quotes: Vec<Quote>
     }
 
     impl Book {
+        pub fn new(title: &str, author: &str) -> Book {
+            Book {
+                title: title.to_string(),
+                author: author.to_string(),
+                quotes: Vec::new()
+            }
+        }
+
         pub fn from_file(filepath: &str) -> Book {
             let f = fs::read_to_string(filepath);
             let input = f.expect("could not open input file");
@@ -48,31 +50,63 @@ pub mod converter {
                 .unwrap()
                 .split_once(" by ").unwrap();
 
-            let mut chapters: Vec<Chapter> = Vec::new();
+            let first_chapter_position = input
+                .lines()
+                .position(|line| line.starts_with("Chapter "))
+                .unwrap();
 
-            let mut chapter: Chapter = Chapter::new();
+            let mut book = Book::new(title, author);
 
-            for line in input.lines().into_iter() {
-                if line.starts_with("Chapter") && !line.starts_with("Chapter progress") && line != chapter.title {
-                    // push chapter quotes
-                    if chapter.title != "" {
-                       chapters.push(chapter);
+            let groups = input
+                .lines()
+                .skip(first_chapter_position)
+                .filter(|line| !line.is_empty() && !line.ends_with("Highlight") && !line.starts_with("Chapter progress"))
+                .fold(Vec::new(), |mut acc, x| {
+                    if x.starts_with("Chapter ") {
+                        acc.push((Vec::new()));
                     }
-                    // set new chapter
-                    chapter = Chapter::from(line);
-                } else if line.starts_with("Highlight:") {
-                    let quote = line.replace("Highlight: ", "");
-                    chapter.add_quote(&quote);
-                }
-            }
+                    acc.last_mut().unwrap().push(x.trim());
+                    acc
+                });
 
-            chapters.push(chapter);
+            groups
+                .into_iter()
+                .for_each(|group| {
+                    let title = group[0];
+                    if group.contains(&"Annotation") {
+                        let mut doing_notes = false;
+                        let mut highlights: Vec<String> = Vec::new();
+                        let mut notes: Vec<String> = Vec::new();
+                        for line in group.into_iter().skip(2) {
 
-            Book {
-                title: title.to_string(),
-                author: author.to_string(),
-                chapters
-            }
+                            if line.starts_with("Notes:") {
+                                doing_notes = true;
+                            }
+
+                            if !doing_notes {
+                                highlights.push(line.replace("Highlight:", "").trim().to_string());
+                            } else {
+                                notes.push(line.replace("Notes: ", "").trim().to_string());
+                            }
+                        }
+
+                        book.quotes.push(Quote {
+                            chapter: title.to_string(),
+                            quote: highlights,
+                            notes
+                        })
+
+                    } else {
+                        let quotes: Vec<String> = group.into_iter().skip(1).map(|x| x.replace("Highlight: ", "").trim().to_string()).collect::<Vec<_>>();
+                        book.quotes.push(Quote {
+                            chapter: title.to_string(),
+                            quote: quotes,
+                            notes: Vec::default()
+                        })
+                    }
+                });
+
+            book
         }
 
         pub fn export_to_post(&self) -> String {
@@ -91,17 +125,26 @@ Intro
 Author(s): {}
 ", self.title, self.author);
 
-            for chapter in &self.chapters {
-                post.push_str(format!("## {}\n\n", chapter.title).as_str());
-                for quote in &chapter.quotes {
-                    post.push_str(format!("> {}\n\n", quote).as_str());
+            let mut chapter_title = String::default();
+
+            for quote in &self.quotes {
+                if quote.chapter != chapter_title.to_string() {
+                    chapter_title = quote.chapter.to_string();
+                    post.push_str(format!("## {}\n\n", quote.chapter).as_str());
+                }
+
+                for highlight in &quote.quote {
+                    post.push_str(format!("> {}\n\n", highlight).as_str());
+                }
+
+                for note in &quote.notes {
+                    post.push_str(format!("{}\n\n", note).as_str());
                 }
             }
 
             post
         }
     }
-
 }
 
 #[cfg(test)]
@@ -122,18 +165,15 @@ mod tests {
     #[test]
     fn parse_chapters_from_input() {
         let book = converter::Book::from_file(test_file);
-        assert_eq!(book.chapters.len(), 11);
-
-        let chapter_counts: Vec<(String, usize)> = book.chapters
-            .into_iter()
-            .map(|chapter| (chapter.title, chapter.quotes.len()))
-            .collect();
-
-        assert_eq!(chapter_counts.len(), 11);
-        assert_eq!(chapter_counts[0].0, "Chapter 4: Preface");
-        assert_eq!(chapter_counts[0].1, 7);
-        assert_eq!(chapter_counts[chapter_counts.len()-1].0, "Chapter 27: 9. Plan");
-        assert_eq!(chapter_counts[chapter_counts.len()-1].1, 16);
+        assert_eq!(book.quotes.len(), 167);
+        assert_eq!(book.quotes[0].chapter, "Chapter 4: Preface");
+        assert_eq!(book.quotes[0].quote.len(), 1);
+        assert_eq!(book.quotes[0].notes.len(), 0);
+        assert_eq!(book.quotes[19].chapter, "Chapter 6: Introduction");
+        assert_eq!(book.quotes[19].quote.len(), 1);
+        assert_eq!(book.quotes[19].quote[0], "developed");
+        assert_eq!(book.quotes[19].notes.len(), 1);
+        assert_eq!(book.quotes[19].notes[0], "Leadership program to make it scalable");
     }
 
     #[test]

@@ -9,9 +9,4 @@ fn main() {
     let book = Book::from_file(&file);
     let export = book.export_to_post();
     println!("{}", export)
-
-   // let input = read_test_file("input.txt");
-   // let book = converter::Book::from(&input);
-   // //let export = book.export_to_post();
-   // println!("{export:?}");
 }

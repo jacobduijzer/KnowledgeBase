@@ -20,13 +20,13 @@ Highlight: there can be no leadership where there is no team.
 Chapter 4: Preface
 Highlight
 Chapter progress: 3.04%
-Highlight: learned extremely valuable lessons through success
+Highlight: learned extremely valuable lessons through success 
 
 
 Chapter 4: Preface
 Highlight
 Chapter progress: 3.48%
-Highlight: and failure.
+Highlight: and failure. 
 
 
 Chapter 4: Preface
@@ -38,7 +38,7 @@ Highlight: We made mistakes and learned from them, discovering what works and wh
 Chapter 4: Preface
 Highlight
 Chapter progress: 3.48%
-Highlight: write
+Highlight: write 
 
 
 Chapter 4: Preface
@@ -62,7 +62,7 @@ Highlight: for any person who aspires to better themselves.
 Chapter 6: Introduction
 Highlight
 Chapter progress: 7.83%
-Highlight: Effective leaders lead successful teams that accomplish their mission and win. Ineffective leaders do not.
+Highlight: Effective leaders lead successful teams that accomplish their mission and win. Ineffective leaders do not. 
 
 
 Chapter 6: Introduction
@@ -117,13 +117,13 @@ Highlight: must believe in and trust the leader they are asked to follow.
 Chapter 6: Introduction
 Highlight
 Chapter progress: 9.13%
-Highlight: crucial leaders at every level of the team—the senior enlisted leaders, the fire team leaders in charge of four people, the squad leaders in charge of eight, and the junior petty officers that stepped up, took charge, and led.
+Highlight: crucial leaders at every level of the team—the senior enlisted leaders, the fire team leaders in charge of four people, the squad leaders in charge of eight, and the junior petty officers that stepped up, took charge, and led. 
 
 
 Chapter 6: Introduction
 Annotation
 Chapter progress: 9.13%
-Highlight: developed
+Highlight: developed 
 Notes: Leadership program to make it scalable
 
 
@@ -158,7 +158,7 @@ Highlight: PRINCIPLE
 Chapter 9: 1. Extreme Ownership
 Highlight
 Chapter progress: 15.22%
-Highlight:
+Highlight: 
  When subordinates aren’t doing what they should, leaders that exercise Extreme Ownership cannot blame the subordinates. They must first look in the mirror at themselves. The leader bears full responsibility for explaining the strategic mission, developing the tactics, and securing the training and resources to enable the team to properly and successfully execute.
 
 
@@ -166,7 +166,7 @@ Highlight:
 Chapter 9: 1. Extreme Ownership
 Highlight
 Chapter progress: 15.22%
-Highlight:  an individual on the team is not performing at the level required for the team to succeed, the leader must train and mentor that underperformer.
+Highlight:  an individual on the team is not performing at the level required for the team to succeed, the leader must train and mentor that underperformer. 
 
 
 Chapter 9: 1. Extreme Ownership
@@ -242,7 +242,7 @@ Chapter 9: 1. Extreme Ownership
 Annotation
 Chapter progress: 17.39%
 Highlight: Extreme Ownership in their leaders, and, as a result, they emulate Extreme Ownership throughout the chain of command down to the most junior personnel. As a group they try to figure out how to fix their problems—instead of trying to figure out who or what to blame. For those on the outside looking in, like our training group—or the board in your case—the difference is obvious.”
- “And that is
+ “And that is 
 Notes: Use energy o find solutions, not causes or people to blame.
 
 
@@ -262,7 +262,7 @@ Highlight: The leader’s attitude sets the tone for the
 Chapter 11: 2. No Bad Teams, Only Bad Leaders
 Highlight
 Chapter progress: 20.87%
-Highlight: leadership is the single greatest factor in any team’s performance. Whether a team succeeds or fails is all up to the leader.
+Highlight: leadership is the single greatest factor in any team’s performance. Whether a team succeeds or fails is all up to the leader. 
 
 
 Chapter 11: 2. No Bad Teams, Only Bad Leaders
@@ -275,7 +275,7 @@ Highlight: no bad teams, only bad leaders was a difficult one to accept but neve
 Chapter 11: 2. No Bad Teams, Only Bad Leaders
 Highlight
 Chapter progress: 21.3%
-Highlight: entire team. The leader drives performance—or doesn’t.
+Highlight: entire team. The leader drives performance—or doesn’t. 
 
 
 Chapter 11: 2. No Bad Teams, Only Bad Leaders
@@ -294,7 +294,7 @@ Highlight: leader must pull the different elements within the team together to s
 Chapter 11: 2. No Bad Teams, Only Bad Leaders
 Highlight
 Chapter progress: 22.61%
-Highlight: When leaders who epitomize Extreme Ownership drive their teams to achieve a higher standard of performance, they must recognize that when it comes to standards, as a leader, it’s not what you preach, it’s what you tolerate. When setting expectations, no matter what has been said or written, if substandard performance is accepted and no one is held accountable—if there are no consequences—that poor performance becomes the new standard. Therefore, leaders must enforce standards. Consequences for failing need not be immediately severe, but leaders must ensure that tasks are repeated until the higher
+Highlight: When leaders who epitomize Extreme Ownership drive their teams to achieve a higher standard of performance, they must recognize that when it comes to standards, as a leader, it’s not what you preach, it’s what you tolerate. When setting expectations, no matter what has been said or written, if substandard performance is accepted and no one is held accountable—if there are no consequences—that poor performance becomes the new standard. Therefore, leaders must enforce standards. Consequences for failing need not be immediately severe, but leaders must ensure that tasks are repeated until the higher 
 
 
 Chapter 11: 2. No Bad Teams, Only Bad Leaders
@@ -339,7 +339,7 @@ Highlight: trained for hundreds of hours, iteration after iteration, drill after
 Chapter 13: 3. Believe
 Annotation
 Chapter progress: 26.09%
-Highlight: kept ourselves in peak physical condition
+Highlight: kept ourselves in peak physical condition 
 Notes: How do we keep up, grow, learn, train?
 
 
@@ -352,7 +352,7 @@ Highlight: they will not be able to convince others—
 Chapter 13: 3. Believe
 Highlight
 Chapter progress: 29.57%
-Highlight: If a leader does not believe, he or she will not take the risks
+Highlight: If a leader does not believe, he or she will not take the risks 
 
 
 Chapter 13: 3. Believe
@@ -423,7 +423,7 @@ Chapter 15: 4. Check the Ego
 Highlight
 Chapter progress: 36.96%
 Highlight: preservation. Often, the most difficult ego to deal with is your own.
- Everyone has an ego. Ego drives the most successful people in
+ Everyone has an ego. Ego drives the most successful people in 
 
 
 Chapter 15: 4. Check the Ego
@@ -437,7 +437,7 @@ Chapter 15: 4. Check the Ego
 Highlight
 Chapter progress: 37.39%
 Highlight: Ownership requires checking your ego and operating with a high degree of humility. Admitting mistakes, taking ownership, and developing a plan to overcome challenges are integral to any successful team. Ego can prevent a leader from conducting an honest, realistic assessment of his or her own performance and the performance of the team.
- In the SEAL Teams, we strive to be
+ In the SEAL Teams, we strive to be 
 
 
 Chapter 15: 4. Check the Ego
@@ -511,7 +511,7 @@ Highlight: maintain the ability to quickly reprioritize efforts and rapidly adap
 Chapter 22: 7. Prioritize and Execute
 Highlight
 Chapter progress: 56.96%
-Highlight: A particularly effective means to help Prioritize and Execute under pressure is to stay at least a step or two ahead of real-time problems. Through careful contingency planning, a leader can anticipate likely challenges that could arise during execution and map out an effective response to those challenges before they happen.
+Highlight: A particularly effective means to help Prioritize and Execute under pressure is to stay at least a step or two ahead of real-time problems. Through careful contingency planning, a leader can anticipate likely challenges that could arise during execution and map out an effective response to those challenges before they happen. 
 
 
 Chapter 22: 7. Prioritize and Execute
@@ -549,7 +549,7 @@ Highlight: The proper understanding and utilization of Decentralized Command tak
 Chapter 24: 8. Decentralized Command
 Highlight
 Chapter progress: 59.57%
-Highlight: Pushing the decision making down to the subordinate, frontline leaders within the task unit was critical to our success.
+Highlight: Pushing the decision making down to the subordinate, frontline leaders within the task unit was critical to our success. 
 
 
 Chapter 24: 8. Decentralized Command
@@ -655,7 +655,7 @@ Highlight: You could end up with that if you, as a leader, failed to give clear 
 Chapter 24: 8. Decentralized Command
 Highlight
 Chapter progress: 65.22%
-Highlight: Proper Decentralized Command requires simple, clear, concise orders that can be understood easily by everyone in the chain of command.
+Highlight: Proper Decentralized Command requires simple, clear, concise orders that can be understood easily by everyone in the chain of command. 
 
 
 Chapter 24: 8. Decentralized Command
@@ -692,7 +692,7 @@ Highlight: explicitly clear and specifically focused to achieve the greater stra
 Chapter 27: 9. Plan
 Highlight
 Chapter progress: 69.13%
-Highlight:
+Highlight: 
  What’s the mission? Planning begins with mission analysis. Leaders must identify clear directives for the team.
 
 
@@ -706,7 +706,7 @@ Highlight:  is critical to utilize all assets and lean on the expertise of those
 Chapter 27: 9. Plan
 Highlight
 Chapter progress: 69.57%
-Highlight: Team leaders within the greater team and frontline, tactical-level leaders must have
+Highlight: Team leaders within the greater team and frontline, tactical-level leaders must have 
 
 
 Chapter 27: 9. Plan
@@ -719,7 +719,7 @@ Highlight: understood by everyone involved in the execution of the plan, it guid
 Chapter 27: 9. Plan
 Highlight
 Chapter progress: 69.57%
-Highlight: Team participation—even from the most junior personnel—is critical in developing bold, innovative solutions to problem sets.
+Highlight: Team participation—even from the most junior personnel—is critical in developing bold, innovative solutions to problem sets. 
 
 
 Chapter 27: 9. Plan
@@ -777,7 +777,7 @@ Highlight: let the
 Chapter 27: 9. Plan
 Highlight
 Chapter progress: 73.04%
-Highlight: After each combat operation, we pulled our platoon together and talked through the details in a post-operational debrief. In a concise and to-the-point format, we analyzed what had worked and what hadn’t, how we might refine our standard operating procedures, and how we could do
+Highlight: After each combat operation, we pulled our platoon together and talked through the details in a post-operational debrief. In a concise and to-the-point format, we analyzed what had worked and what hadn’t, how we might refine our standard operating procedures, and how we could do 
 
 
 Chapter 27: 9. Plan
@@ -796,7 +796,7 @@ Highlight: as a leader to understand for myself the strategic impact of our oper
 Chapter 29: 10. Leading Up and Down the Chain of Command
 Highlight
 Chapter progress: 76.96%
-Highlight: greatest lessons learned for me was that I could have done a far better job of leading down the chain of command. I should have given greater ownership of plans to the troops—especially those who were negative and weren’t fully committed to the mission.
+Highlight: greatest lessons learned for me was that I could have done a far better job of leading down the chain of command. I should have given greater ownership of plans to the troops—especially those who were negative and weren’t fully committed to the mission. 
 
 
 Chapter 29: 10. Leading Up and Down the Chain of Command
@@ -809,7 +809,7 @@ Highlight:  that each have an understanding of the other’s role. And it is par
 Chapter 29: 10. Leading Up and Down the Chain of Command
 Highlight
 Chapter progress: 77.39%
-Highlight: leaders possess insight into the bigger picture and why specific tasks need to be accomplished. This information does not automatically translate to subordinate leaders and the frontline troops. Junior members of the team—the tactical level operators—are rightly focused on their specific jobs. They must be in order to accomplish the tactical mission.
+Highlight: leaders possess insight into the bigger picture and why specific tasks need to be accomplished. This information does not automatically translate to subordinate leaders and the frontline troops. Junior members of the team—the tactical level operators—are rightly focused on their specific jobs. They must be in order to accomplish the tactical mission. 
 
 
 Chapter 29: 10. Leading Up and Down the Chain of Command
@@ -827,7 +827,7 @@ Highlight: understanding helps the team members prioritize their efforts in a ra
 Chapter 29: 10. Leading Up and Down the Chain of Command
 Highlight
 Chapter progress: 77.39%
-Highlight: your team isn’t doing what you need them to do, you first have to look at yourself.
+Highlight: your team isn’t doing what you need them to do, you first have to look at yourself. 
 
 
 Chapter 29: 10. Leading Up and Down the Chain of Command
@@ -845,7 +845,7 @@ Highlight: If they have questions, it is our fault for not properly communicatin
 Chapter 29: 10. Leading Up and Down the Chain of Command
 Highlight
 Chapter progress: 79.13%
-Highlight: come to Jocko in examining his own frustrations up the chain. “Leadership doesn’t just flow down the chain of command, but up as well,” he said. “We have to own everything in our world. That’s what Extreme Ownership is all
+Highlight: come to Jocko in examining his own frustrations up the chain. “Leadership doesn’t just flow down the chain of command, but up as well,” he said. “We have to own everything in our world. That’s what Extreme Ownership is all 
 
 
 Chapter 29: 10. Leading Up and Down the Chain of Command
@@ -864,7 +864,7 @@ Notes: So, when feeling misunderstood, stop complaining, take the lead, commnica
 Chapter 29: 10. Leading Up and Down the Chain of Command
 Highlight
 Chapter progress: 79.57%
-Highlight: risks. The CO grew more comfortable with our combat operations. He and his staff developed trust in us.
+Highlight: risks. The CO grew more comfortable with our combat operations. He and his staff developed trust in us. 
 
 
 Chapter 29: 10. Leading Up and Down the Chain of Command
@@ -901,7 +901,7 @@ Highlight: your immediate leadership. In any chain of command, the leadership
 Chapter 29: 10. Leading Up and Down the Chain of Command
 Highlight
 Chapter progress: 80.0%
-Highlight: command undermines the authority of leaders at all levels. This is catastrophic to the performance of any
+Highlight: command undermines the authority of leaders at all levels. This is catastrophic to the performance of any 
 
 
 Chapter 29: 10. Leading Up and Down the Chain of Command
@@ -962,7 +962,7 @@ Notes: Emerging Domain. Again, Cynefin.
 Chapter 31: 11. Decisiveness amid Uncertainty
 Highlight
 Chapter progress: 86.52%
-Highlight: as a leader, my default setting should be aggressive—proactive rather than reactive. This was critical to the success of any team. Instead of letting the situation dictate our decisions, we must dictate the situation.
+Highlight: as a leader, my default setting should be aggressive—proactive rather than reactive. This was critical to the success of any team. Instead of letting the situation dictate our decisions, we must dictate the situation. 
 
 
 Chapter 31: 11. Decisiveness amid Uncertainty
@@ -993,7 +993,7 @@ Notes: Who knows a boss that starts at ?
 Chapter 33: 12. Discipline Equals Freedom—The Dichotomy of Leadership
 Highlight
 Chapter progress: 90.43%
-Highlight: discipline was not only the most important quality for an individual but also for a team.
+Highlight: discipline was not only the most important quality for an individual but also for a team. 
 
 
 Chapter 33: 12. Discipline Equals Freedom—The Dichotomy of Leadership
@@ -1031,7 +1031,7 @@ Highlight: Leaders must act with professionalism and recognize others for their 
 Chapter 33: 12. Discipline Equals Freedom—The Dichotomy of Leadership
 Highlight
 Chapter progress: 91.74%
-Highlight: leader must be strong but likewise have endurance, not only physically but mentally. He or she must maintain the ability to perform at the highest level and sustain that level for the long
+Highlight: leader must be strong but likewise have endurance, not only physically but mentally. He or she must maintain the ability to perform at the highest level and sustain that level for the long 
 
 
 Chapter 33: 12. Discipline Equals Freedom—The Dichotomy of Leadership
@@ -1046,7 +1046,7 @@ Notes: General leadership part
 Chapter 36: Afterword
 Highlight
 Chapter progress: 95.65%
-Highlight: This means leaders must be heavily engaged in training and mentoring their junior leaders to prepare them to step up and assume greater responsibilities.
+Highlight: This means leaders must be heavily engaged in training and mentoring their junior leaders to prepare them to step up and assume greater responsibilities. 
 
 
 Chapter 36: Afterword
@@ -1077,5 +1077,6 @@ Highlight: Leadership is simple, but not easy.
 Chapter 36: Afterword
 Highlight
 Chapter progress: 96.09%
-Highlight: Leadership decisions are inherently challenging and take practice. Not every decision will be a good one: all leaders make mistakes.
+Highlight: Leadership decisions are inherently challenging and take practice. Not every decision will be a good one: all leaders make mistakes. 
+
 
